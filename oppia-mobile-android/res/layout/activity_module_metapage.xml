@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <openwave.nurhi.mobile.learning.application.Header
+        android:id="@+id/header"
+        style="@style/Header" />
+
+    <TextView
+        android:id="@+id/module_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+       	style="@style/HeaderText"
+       	android:background="@drawable/background_light"/>
+    
+    <TextView
+        android:id="@+id/module_shortname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/SmallTextDark"
+        android:background="@drawable/background_light"/>
+    
+    <TextView
+        android:id="@+id/module_versionid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/SmallTextDark"
+        android:background="@drawable/background_light"/>
+
+    <WebView
+        android:id="@+id/metapage_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </WebView>
+
+</LinearLayout>

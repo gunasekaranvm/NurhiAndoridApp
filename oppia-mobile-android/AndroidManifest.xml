@@ -1,0 +1,173 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="openwave.nurhi.mobile.learning"
+    android:versionCode="13"
+    android:versionName="1.0.13" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="openwave.nurhi.mobile.learning.application.MobileLearning"
+        android:allowBackup="true"
+        android:icon="@drawable/dc_logo"
+        android:label="Nurhi"
+        android:theme="@style/AppTheme.Dark" >
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.FlashScreen"
+            android:configChanges="orientation"
+            android:label="Nurhi"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.MobileLearningActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.MobileLearningLoginActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.ModuleIndexActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_module_index"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.ModuleActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_module"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.DownloadActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_download_activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.TagSelectActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_tag_select_activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.PrefsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_prefs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Light" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.AboutActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_about"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.Second"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.LoginActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.HelpActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.RegisterActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.ModuleMetaPageActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_module_about"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.DownloadMediaActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_download_media"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.ScoreActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.AppActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.widgets.PageWidget"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_module"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.widgets.MQuizWidget"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_module"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.LibraryActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="openwave.nurhi.mobile.learning.activity.FunfMainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="openwave.nurhimobile.learning.service.TrackerService"
+            android:icon="@drawable/dc_logo"
+            android:label="@string/service_tracker" >
+        </service>
+        <service android:name="openwave.nurhi.mobile.learning.utils.MyLocation" >
+        </service>
+
+        <receiver android:name="openwave.nurhimobile.learning.service.TrackerScheduleReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="openwave.nurhimobile.learning.service.TrackerStartServiceReceiver" >
+        </receiver>
+    </application>
+
+</manifest>
