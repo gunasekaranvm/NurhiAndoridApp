@@ -94,15 +94,19 @@ public class TrackerService extends Service implements APIRequestListener{
 			// send activity trackers
 			MobileLearning app = (MobileLearning) this.getApplication();
 			if(app.omSubmitTrackerMultipleTask == null){
+				
+				
+				// send quiz results
+				Payload mqp = db.getUnsentMquiz();
+				SubmitMQuizTask smqt = new SubmitMQuizTask(this);
+				smqt.execute(mqp);
+
+				
 				app.omSubmitTrackerMultipleTask = new SubmitTrackerMultipleTask(this);
 				app.omSubmitTrackerMultipleTask.execute();
 			}
 			
-			// send quiz results
-			Payload mqp = db.getUnsentMquiz();
-			SubmitMQuizTask smqt = new SubmitMQuizTask(this);
-			smqt.execute(mqp);
-
+		
 			db.close();
 
 		}
